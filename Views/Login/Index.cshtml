@@ -16,6 +16,10 @@
     <label class="form-label">Password</label>
     @Html.PasswordFor(model => model.Password)
     <br />
+    @if (Model is not null && Model.LoginSuccess)
+    {
+        <p class="alert-success">Login was successful. Welcome!</p>
+    }
     @if (Model is not null && Model.UsernameNotFound)
     {
         <p class="alert-danger">The Username you specified doesn't exist.</p>

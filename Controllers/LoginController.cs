@@ -35,7 +35,10 @@ public sealed class LoginController : Controller
         }
 
         var encryptedPassword = Encryption.Encrypt(model.Password);
-        var passwordsMatch = encryptedPassword.Equals(foundUser.Password);
+        var passwordsMatch = string.Equals(
+            encryptedPassword,
+            foundUser.Password,
+            StringComparison.Ordinal);
 
         if (!passwordsMatch)
         {
@@ -43,6 +46,8 @@ public sealed class LoginController : Controller
             return View("Index", model);
         }
 
-        return View("Home/Index");
+        model.LoginSuccess = true;
+
+        return View("Index", model);
     }
 }

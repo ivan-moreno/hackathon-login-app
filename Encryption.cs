@@ -10,6 +10,7 @@ public static class Encryption
         if (rawText.Length == 0)
             return string.Empty;
 
+        rawText = rawText.Normalize(NormalizationForm.FormKC);
         byte[] bytes = SHA256.HashData(Encoding.UTF8.GetBytes(rawText));
         var stringBuilder = new StringBuilder();
 
