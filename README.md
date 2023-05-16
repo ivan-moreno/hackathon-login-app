@@ -1,6 +1,11 @@
 # Hackathon Fundación Esplai: Login & Registro
 
 [![CodeFactor](https://www.codefactor.io/repository/github/ivan-moreno/hackathon-login-app/badge/master)](https://www.codefactor.io/repository/github/ivan-moreno/hackathon-login-app/overview/master)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=ivan-moreno_hackathon-login-app&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=ivan-moreno_hackathon-login-app)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ivan-moreno_hackathon-login-app&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=ivan-moreno_hackathon-login-app)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ivan-moreno_hackathon-login-app&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=ivan-moreno_hackathon-login-app)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=ivan-moreno_hackathon-login-app&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=ivan-moreno_hackathon-login-app)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=ivan-moreno_hackathon-login-app&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=ivan-moreno_hackathon-login-app)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ivan-moreno_hackathon-login-app&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ivan-moreno_hackathon-login-app)
 
 
