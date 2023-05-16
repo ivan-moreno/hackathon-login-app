@@ -47,6 +47,8 @@ public sealed class LoginController : Controller
         }
 
         model.LoginSuccess = true;
+        HttpContext.Session.SetString("LoggedInDisplayName", foundUser.DisplayName);
+        HttpContext.Session.SetString("LoggedInUsername", foundUser.Username);
 
         return View("Index", model);
     }

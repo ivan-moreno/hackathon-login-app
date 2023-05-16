@@ -15,6 +15,9 @@ public sealed class UsersController : Controller
 
     public async Task<IActionResult> Index()
     {
+        if (!HttpContext.Session.TryGetValue("LoggedInUsername", out _))
+            return RedirectToAction("Index", "Home");
+
         return _context.Users != null
             ? View(await _context.Users.ToListAsync())
             : Problem("Entity set 'AppDbContext.Users'  is null.");
@@ -22,6 +25,9 @@ public sealed class UsersController : Controller
 
     public async Task<IActionResult> Details(int? id)
     {
+        if (!HttpContext.Session.TryGetValue("LoggedInUsername", out _))
+            return RedirectToAction("Index", "Home");
+
         if (id == null || _context.Users == null)
             return NotFound();
 
