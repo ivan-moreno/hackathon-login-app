@@ -1,0 +1,33 @@
+﻿@model HackathonLoginApp.Models.Views.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>User Login</h1>
+
+@using (Html.BeginForm("Login", "Login", FormMethod.Post))
+{
+    <p>Don't have an account? <a asp-controller="Register" asp-action="Index">Click here to create an account.</a></p>
+    <br />
+    <label class="form-label">Username</label>
+    @Html.TextBoxFor(model => model.Username)
+    <br />
+    <label class="form-label">Password</label>
+    @Html.PasswordFor(model => model.Password)
+    <br />
+    @if (Model is not null && Model.UsernameNotFound)
+    {
+        <p class="alert-danger">The Username you specified doesn't exist.</p>
+    }
+    @if (Model is not null && Model.EmptyPassword)
+    {
+        <p class="alert-danger">You must specify a Password.</p>
+    }
+    @if (Model is not null && Model.WrongPassword)
+    {
+        <p class="alert-danger">The Password you specified is incorrect.</p>
+    }
+    <br />
+    <button class="btn btn-primary" type="submit">Login</button>
+}

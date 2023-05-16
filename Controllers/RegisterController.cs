@@ -2,7 +2,7 @@
 
 namespace HackathonLoginApp.Controllers;
 
-public class RegisterController : Controller
+public sealed class RegisterController : Controller
 {
     public IActionResult Index()
     {

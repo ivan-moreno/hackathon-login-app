@@ -42,9 +42,12 @@ public sealed class UsersController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create([Bind("Username,Password,DisplayName")] User user)
     {
+        var usernameAlreadyExists = _context.Users.Any(x => x.Username.Equals(user.Username));
+
+        user.Password = Encryption.Encrypt(user.Password);
         user.RegistrationDate = DateTime.Now;
 
-        if (ModelState.IsValid)
+        if (ModelState.IsValid && !usernameAlreadyExists)
         {
             _context.Add(user);
             await _context.SaveChangesAsync();

@@ -1,4 +1,4 @@
-﻿@model HackathonLoginApp.User
+﻿@model User
 
 @{
     ViewData["Title"] = "Register";
@@ -8,11 +8,24 @@
 
 @using (Html.BeginForm("Create", "Users", FormMethod.Post))
 {
-    <label>Display Name</label>
+    <p>Already have an account? <a asp-controller="Login" asp-action="Index">Log in instead!</a></p>
+    <br />
+    <label class="form-label">Display Name</label>
+    <br />
     @Html.TextBoxFor(user => user.DisplayName)
-    <label>Username</label>
+    <br />
+    <label class="form-label">Username</label>
+    <br />
     @Html.TextBoxFor(user => user.Username)
-    <label>Password</label>
-    @Html.TextBoxFor(user => user.Password)
-    <button type="submit">Register</button>
+    <br />
+    <label class="form-label">Password</label>
+    <br />
+    @Html.PasswordFor(user => user.Password)
+    <br />
+    <br />
+    <input type="checkbox">
+    <label class="form-label">I accept the terms and conditions. (there aren't any!)</label>
+    <br />
+    <br />
+    <button class="btn btn-primary" type="submit">Register</button>
 }
