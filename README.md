@@ -10,7 +10,11 @@ Aplicación [ASP.NET Core](https://dotnet.microsoft.com/en-us/learn/aspnet/what-
 
 1. Clonar o descargar un .ZIP con el código de este repositorio.
 2. Abrir el proyecto con [Visual Studio](https://visualstudio.microsoft.com) o un IDE similar.
-3. Ejecutar.
+3. Añadir un servicio **SQL Server** con los siguientes campos:
+    - Connection String Name: `localDatabase`
+    - Connection String Value: `Server=(localdb)\mssqllocaldb;Database=aspnet-53bc9b9d-9d6a-45d4-8429-2a2761773502;Trusted_Connection=True;MultipleActiveResultSets=true`
+4. En la ventana **Package Manager Console**, introducir el siguiente comando: `update-database`
+5. Ejecutar.
 
 En caso de problemas de dependencias, se deben instalar los siguientes paquetes NuGet en el proyecto:
 - [Microsoft.EntityFrameworkCore](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/7.0.5?_src=template)
