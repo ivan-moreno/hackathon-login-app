@@ -1,5 +1,8 @@
 ﻿namespace HackathonLoginApp.Models.Views;
 
+/// <summary>
+/// Serves as a model for the Login page.
+/// </summary>
 public sealed class LoginViewModel
 {
     public string Username { get; set; } = string.Empty;

@@ -5,9 +5,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
+// Configures the application to use a SQL Server Database.
 var dbConnectionString = builder.Configuration.GetConnectionString("localDatabase");
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(dbConnectionString));
 
+// Configures the application for HTTP Sessions.
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
