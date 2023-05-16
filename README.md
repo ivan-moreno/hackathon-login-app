@@ -4,12 +4,12 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ivan-moreno_hackathon-login-app&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ivan-moreno_hackathon-login-app)
 
 
-Aplicación ASP.NET MVC con [Entity Framework Core]((https://learn.microsoft.com/en-us/ef/core)) que simula el registro e inicio de sesión de usuarios en una web.
+Aplicación [ASP.NET Core](https://dotnet.microsoft.com/en-us/learn/aspnet/what-is-aspnet-core) MVC con [Entity Framework Core](https://learn.microsoft.com/en-us/ef/core) que simula el registro e inicio de sesión de usuarios en una web.
 
 ## Instalación
 
 1. Clonar o descargar un .ZIP con el código de este repositorio.
-2. Abrir el proyecto con Visual Studio o un IDE similar.
+2. Abrir el proyecto con [Visual Studio](https://visualstudio.microsoft.com) o un IDE similar.
 3. Ejecutar.
 
 En caso de problemas de dependencias, se deben instalar los siguientes paquetes NuGet en el proyecto:
@@ -20,7 +20,7 @@ En caso de problemas de dependencias, se deben instalar los siguientes paquetes 
 
 ## Contacto
 
-- [Iván Moreno Pérez en **LinkedIn**](https://www.linkedin.com/in/iv%C3%A1n-moreno-p%C3%A9rez/)
+- [Iván Moreno Pérez en **LinkedIn**](https://www.linkedin.com/in/iv%C3%A1n-moreno-p%C3%A9rez)
 
 ## Licencia
 
