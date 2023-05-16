@@ -1,4 +1,4 @@
-namespace HackathonLoginApp.Models;
+namespace HackathonLoginApp.Models.Views;
 
 public sealed class ErrorViewModel
 {

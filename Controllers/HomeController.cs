@@ -1,4 +1,4 @@
-﻿using HackathonLoginApp.Models;
+﻿using HackathonLoginApp.Models.Views;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 

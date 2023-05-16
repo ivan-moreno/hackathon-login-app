@@ -1,0 +1,18 @@
+﻿@model HackathonLoginApp.User
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>User Registration</h1>
+
+@using (Html.BeginForm("Create", "Users", FormMethod.Post))
+{
+    <label>Display Name</label>
+    @Html.TextBoxFor(user => user.DisplayName)
+    <label>Username</label>
+    @Html.TextBoxFor(user => user.Username)
+    <label>Password</label>
+    @Html.TextBoxFor(user => user.Password)
+    <button type="submit">Register</button>
+}
